@@ -1,2 +1,3 @@
 venv/
 lxper.json
+__pycache__/

@@ -15,10 +15,10 @@ def connect(file_name):
 
 def write(worksheet, index, result):
 
-    last_alphabet = chr(65 + len(result))
+    last_alphabet = chr(65 + len(result[0])-1)
 
     try:
-        worksheet.update(f"A{index}:{last_alphabet}{index}", [result])
+        worksheet.update(f"A{index}:{last_alphabet}{len(result) + index}", result)
     except:
         # over 50000 string in one cell ==> error
         # allow one data writing per a sec
